@@ -27,8 +27,8 @@ const Page1 = () => {
     <div onMouseMove={(e)=>{
       mouseMoving(e)
     }} className='h-screen p-4 bg-white relative'>
-        <div id='page1-in' className='shadow-xl shadow-zinc-500 relative py-6 px-20 h-full w-full bg-cover  bg-[url(./assets/background/bg1.png)] rounded-[30px]'>
-            <img className='h-28 ' src="./src/assets/logo/MyLogo.png" alt="" />
+        <div id='page1-in' className='shadow-xl shadow-zinc-500 relative py-6 px-20 h-full w-full bg-cover  bg-[url(/background/bg1.png)] rounded-[30px]'>
+            <img className='h-28 ' src="/logo/MyLogo.png" alt="" />
             
             <TiltText abc={tiltRef}/>
             <BottomText/>
