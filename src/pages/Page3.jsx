@@ -5,7 +5,7 @@ const Page3 = () => {
     <>
     <div className='h-screen w-full p-4 bg-white mt-10'>
             <div className='relative h-[45vw] overflow-hidden '>
-                <video autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover rounded-[30px]' src="./assets/vids/file.mp4"></video>
+                <video autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover rounded-[30px]' src="/src/assets/vids/file.mp4"></video>
 
                 <div className='relative h-full w-1/2 p-4 mt-5'>
                     <h1 className='text-center font-[A] text-[12vw] uppercase text-white'>About me</h1>
