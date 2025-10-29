@@ -2,29 +2,29 @@
 
 @font-face {
   font-family: A;
-  src: url(/public/fonts/A.woff2);
+  src: url(/fonts/A.woff2);
 }
 @font-face {
   font-family: B;
-  src: url(/public/fonts/B.woff2);
+  src: url(/fonts/B.woff2);
 }
 @font-face {
   font-family: C;
-  src: url(/public/fonts/C.woff2);
+  src: url(/fonts/C.woff2);
 }
 @font-face {
   font-family: D;
-  src: url(/public/fonts/570bdcfc936308af-s.p.woff2);
+  src: url(/fonts/570bdcfc936308af-s.p.woff2);
 }
 
 @font-face {
   font-family: E;
-  src: url(public/fonts/68c5787607b6894a-s.p.woff2);
+  src: url(/fonts/68c5787607b6894a-s.p.woff2);
 }
 
 @font-face {
   font-family: F;
-  src: url(public/fonts/ef63838ae561375a-s.p.woff2);
+  src: url(/fonts/ef63838ae561375a-s.p.woff2);
 }
 
 html,body{
