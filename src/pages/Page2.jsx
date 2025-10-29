@@ -1,10 +1,13 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import React from 'react'
+import React, { useRef } from 'react'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Page2 = () => {
-    gsap.registerPlugin(ScrollTrigger)
+    
+    const innerRef = useRef(null);
     
     useGSAP(function(){
         gsap.from('.rotateText',{
@@ -16,11 +19,23 @@ const Page2 = () => {
                 trigger:'.rotateText',
                 start:'top 60%',
                 end:'top -200%',
-                scub: 2
-
+                scrub: 2
             }
         })
-    })
+    },[])
+
+    useGSAP(function(){
+
+        const totalWidth = innerRef.current.scrollWidth / 2;
+
+        gsap.to(innerRef.current,{
+            x:-totalWidth,
+            duration:18,
+            ease:"none",
+            repeat:-1
+        })
+    },[])
+
   return (
     <div id='section2' className=' bg-white text-black p-5 text-center'>
         <h3 className='text-gray-500 font-[D] text-xl'>© debayanportfolio 2025</h3>
@@ -41,6 +56,28 @@ const Page2 = () => {
         </div>
         <div className='rotateText'>
             <h1 className='font-[A] text-[42vw] leading-[35vw]'>WORKS!</h1>
+        </div>
+
+        <div className='mt-8 h-45 w-full overflow-hidden'>
+            <div ref={innerRef} className='h-full w-full flex flex-row no-wrap'>
+                <img src="/src/assets/logo/MERN.png" alt="" />
+                <img src="/src/assets/logo/js.png" alt="" />
+                <img src="/src/assets/logo/java.png" alt="" />
+                <img src="/src/assets/logo/tailwind.png" alt="" />
+                <img src="/src/assets/logo/framer.png" alt="" />
+                <img src="/src/assets/logo/gsap.png" alt="" />
+                <img src="/src/assets/logo/html.png" alt="" />
+                <img src="/src/assets/logo/css.png" alt="" />
+
+                <img src="/src/assets/logo/MERN.png" alt="" />
+                <img src="/src/assets/logo/js.png" alt="" />
+                <img src="/src/assets/logo/java.png" alt="" />
+                <img src="/src/assets/logo/tailwind.png" alt="" />
+                <img src="/src/assets/logo/framer.png" alt="" />
+                <img src="/src/assets/logo/gsap.png" alt="" />
+                <img src="/src/assets/logo/html.png" alt="" />
+                <img src="/src/assets/logo/css.png" alt="" />
+            </div>
         </div>
     </div>
   )
