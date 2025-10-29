@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: A;
+  src: url(/public/fonts/A.woff2);
+}
+@font-face {
+  font-family: B;
+  src: url(/public/fonts/B.woff2);
+}
+@font-face {
+  font-family: C;
+  src: url(/public/fonts/C.woff2);
+}
+@font-face {
+  font-family: D;
+  src: url(/public/fonts/570bdcfc936308af-s.p.woff2);
+}
+
+@font-face {
+  font-family: E;
+  src: url(public/fonts/68c5787607b6894a-s.p.woff2);
+}
+
+@font-face {
+  font-family: F;
+  src: url(public/fonts/ef63838ae561375a-s.p.woff2);
+}
+
+html,body{
+  color: white;
+}
+#page1-in{
+  position: relative;
+  perspective: 1500px;
+}
+#section2{
+  position: relative;
+  perspective: 4000px;
+}
+#tiltDiv{
+  width: fit-content;
+}
+.rotateText{
+  transform-origin: 100% 70%;
+}
