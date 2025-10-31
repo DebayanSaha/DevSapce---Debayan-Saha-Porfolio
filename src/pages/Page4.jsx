@@ -20,6 +20,11 @@ const Page4 = () => {
             path:"/vids/MagmaVid.mp4",
             name:"MAGMA",
             link:"https://magma-lake.vercel.app/",
+        },
+        {
+            path:"/vids/intern4.mp4",
+            name:"Kickload",
+            link:"https://github.com/DebayanSaha/ViteKickloadProduction",
         }
     ]
 

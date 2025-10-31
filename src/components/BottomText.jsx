@@ -17,10 +17,7 @@ const BottomText = () => {
             <h2 className='text-[20px] font-[B] '>debayans682@gmail.com | 8617262208</h2>
             <h3 className='text-[18px] font-[D] text-gray-400 uppercase'>Website Design & Develop</h3>
         </div>
-        <div  id='banner'>
-            <img className='mb-5' src="https://static.wixstatic.com/media/f1c650_ed71078001ef401889b71537cca76dc4~mv2.png/v1/fill/w_80,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cssda-wotd-white.png" alt="" />
-            <img className='mb-5' src="https://static.wixstatic.com/media/f1c650_64de2af00f41462e8aecc3d04537f9b4~mv2.png/v1/fill/w_80,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EN_legend_large.png" alt="" />
-        </div>
+        <div  id='banner'></div>
     </div>
   )
 }
