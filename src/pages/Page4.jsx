@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import 'remixicon/fonts/remixicon.css'
 
 const Page4 = () => {
+    const [index, setIndex] = useState(0);
+    const handleNext=()=>{
+        setIndex((prev)=>(prev+1) % project.length)
+    }
+    const handlePrev=()=>{
+        setIndex((prev)=>prev===0?project.length-1:prev-1)
+    }
+
+    const project=[
+        {
+            path:"/vids/k72vid.mp4",
+            name:"K72 Clone",
+            link:"https://k72-5oux.onrender.com",
+        },
+        {
+            path:"/vids/MagmaVid.mp4",
+            name:"MAGMA",
+            link:"https://magma-lake.vercel.app/",
+        }
+    ]
+
   return (
     <>
         <div className='h-screen*2 w-full p-4 bg-black mt-10'>
@@ -14,10 +36,16 @@ const Page4 = () => {
                 </div>               
             </div>
             <div className='relative h-[45vw] p-3.5 mt-5 rounded-[20px] flex items-center justify-center'>
-                
-                <img className='absolute h-[93vh]' src="/background/astro.png" alt="" />
-                <h1 className='absolute font-[E] top-[25vw] text-[16vw] uppercase'>K72 clone</h1>
-                <video className='h-[35vh]  mb-30 object-cover rounded-full' autoPlay muted loop src="/vids/k72vid.mp4"></video>
+                <i onClick={handleNext} className="absolute z-12 right-0 text-3xl ri-arrow-right-s-line cursor-pointer"></i>
+                <i onClick={handlePrev} className="absolute z-12 left-0 text-3xl ri-arrow-left-s-line cursor-pointer"></i>
+                <div className='absolute top-40 right-40 h-50 w-50 border-2 border-[#9a9a9a38] shadow-2xl shadow-[#9a9a9a38] rounded-4xl z-11 flex items-center justify-center'>
+                    <i onClick={()=>window.open(project[index].link,"_blank")} className="cursor-pointer text-[30vh] ri-arrow-right-up-line"></i>
+                </div>
+                <img className='absolute h-[93vh] z-10' src="/background/astro.png" alt="" />
+                <h1 className='absolute font-[E] bottom-25 leading-0 text-[14vw] uppercase z-11'>{project[index].name}</h1>
+                <div className='absolute top-20 h-96 w-96 rounded-full overflow-hidden'>
+                    <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
+                </div>
             </div>
         </div>
     </>     

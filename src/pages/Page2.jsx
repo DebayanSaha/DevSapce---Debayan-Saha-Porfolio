@@ -13,7 +13,7 @@ const Page2 = () => {
         gsap.from('.rotateText',{
             transform:'rotateX(-80deg)',
             opacity:0,
-            duration:1,
+            duration:2,
             stagger:1,
             scrollTrigger:{
                 trigger:'.rotateText',
@@ -30,15 +30,15 @@ const Page2 = () => {
 
         gsap.to(innerRef.current,{
             x:-totalWidth,
-            duration:18,
+            duration:15,
             ease:"none",
             repeat:-1
         })
     },[])
 
   return (
-    <div id='section2' className=' bg-white text-black p-5 text-center'>
-        <h3 className='text-gray-500 font-[D] text-xl'>© debayanportfolio 2025</h3>
+    <div id='section2' className=' bg-white text-black p-5 text-center overflow-hidden'>
+        <h3 className='text-gray-500 font-[D] text-xl'>© DevSpace | Debayan Saha Portfolio 2025</h3>
         <div className='rotateText mt-10'>
             <h1 className='font-[A] text-[42vw] leading-[35vw]'>IMPACTFUL</h1>
         </div>

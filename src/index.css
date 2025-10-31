@@ -44,3 +44,9 @@ html,body{
 .rotateText{
   transform-origin: 100% 70%;
 }
+.shadow{
+  text-shadow: 4px 4px 20px rgba(152, 152, 152, 0.616);
+}
+.head{
+  width: fit-content;
+}

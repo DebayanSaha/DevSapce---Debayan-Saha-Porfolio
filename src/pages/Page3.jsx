@@ -7,8 +7,8 @@ const Page3 = () => {
             <div className='relative h-[45vw] overflow-hidden '>
                 <video autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover rounded-[30px]' src="/vids/file.mp4"></video>
 
-                <div className='relative h-full w-1/2 p-4 mt-5'>
-                    <h1 className='text-center font-[A] text-[12vw] uppercase text-white'>About me</h1>
+                <div className='relative h-full w-1/2 p-4 flex flex-col justify-center'>
+                    <h1 className='text-center font-[A] text-[12vw] uppercase text-white leading-[15vw]'>About me</h1>
                     <div className='h-40 w-full text-center'>
                         <h2 className='font-[B] text-[22px] leading-[1.5vw]'>ENGINEERED INTUITION | DIGITAL PRECISION</h2> 
                         <h2 className='font-[B] text-[20px]'>CODE THAT THINKS | DESIGN THAT PERFORMS</h2>
