@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
 
@@ -25,6 +26,11 @@ const Page4 = () => {
             path:"/vids/intern4.mp4",
             name:"Kickload",
             link:"https://github.com/DebayanSaha/ViteKickloadProduction",
+        },
+        {
+            path:"/vids/netflix.mp4",
+            name:"Fletmirror",
+            link:"https://github.com/DebayanSaha/ViteKickloadProduction",
         }
     ]
 
@@ -40,17 +46,30 @@ const Page4 = () => {
                     </div>
                 </div>               
             </div>
-            <div className='relative h-[45vw] p-3.5 mt-5 rounded-[20px] flex items-center justify-center'>
+            <div className='relative h-[45vw] p-3.5 mt-5 rounded-[20px] flex items-center justify-center overflow-hidden'>
                 <i onClick={handleNext} className="absolute z-12 right-0 text-3xl ri-arrow-right-s-line cursor-pointer"></i>
                 <i onClick={handlePrev} className="absolute z-12 left-0 text-3xl ri-arrow-left-s-line cursor-pointer"></i>
                 <div className='absolute top-40 right-40 h-50 w-50 border-2 border-[#9a9a9a38] shadow-2xl shadow-[#9a9a9a38] rounded-4xl z-11 flex items-center justify-center'>
                     <i onClick={()=>window.open(project[index].link,"_blank")} className="cursor-pointer text-[30vh] ri-arrow-right-up-line"></i>
                 </div>
-                <img className='absolute h-[93vh] z-10' src="/background/astro.png" alt="" />
-                <h1 className='absolute font-[E] bottom-25 leading-0 text-[14vw] uppercase z-11'>{project[index].name}</h1>
-                <div className='absolute top-20 h-96 w-96 rounded-full overflow-hidden'>
-                    <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
-                </div>
+                <AnimatePresence mode='wait'>
+                    <motion.div key={index}
+                    initial={{ opacity: 0 , x:100 , scale: 0.9 }} animate={{ opacity: 1 , x: 0, scale: 1 }} exit={{ opacity: 0 , x:-100, scale: 0.9 }}
+                    transition={{ duration: 1, ease: "easeInOut" }} className='relative h-full w-full flex items-center justify-center'>
+                        <img className='absolute h-[93vh] z-10' src="/background/astro.png" alt="" />
+                        <h1 className='absolute font-[E] bottom-25 leading-0 text-[14vw] uppercase z-11'>{project[index].name}</h1>
+                        <div className='absolute top-17 h-[27vw] w-[27vw] rounded-full overflow-hidden'>
+                            <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
+                        </div> 
+                    </motion.div>
+                </AnimatePresence>
+                
+                    {/* <h1 className='absolute font-[E] bottom-25 leading-0 text-[14vw] uppercase z-11'>{project[index].name}</h1>
+                    <div className='absolute top-20 h-96 w-96 rounded-full overflow-hidden'>
+                        <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
+                    </div> */}
+            
+                
             </div>
         </div>
     </>     

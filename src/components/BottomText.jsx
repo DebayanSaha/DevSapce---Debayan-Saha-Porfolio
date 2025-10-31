@@ -15,7 +15,7 @@ const BottomText = () => {
     <div className='absolute left-0 bottom-0 py-15 px-16 h-40 w-full flex items-end justify-between'>
         <div>
             <h2 className='text-[20px] font-[B] '>debayans682@gmail.com | 8617262208</h2>
-            <h3 className='text-[18px] font-[D] text-gray-400 uppercase'>Website Design & Develop</h3>
+            <h3 className='text-[18px] font-[D] text-gray-400 uppercase'>Website Design & Development</h3>
         </div>
         <div  id='banner'></div>
     </div>

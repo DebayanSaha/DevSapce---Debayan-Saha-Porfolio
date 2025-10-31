@@ -14,12 +14,12 @@ const Page2 = () => {
             transform:'rotateX(-80deg)',
             opacity:0,
             duration:2,
-            stagger:1,
+            stagger:4,
             scrollTrigger:{
                 trigger:'.rotateText',
                 start:'top 60%',
                 end:'top -200%',
-                scrub: 2
+                scrub: 3
             }
         })
     },[])

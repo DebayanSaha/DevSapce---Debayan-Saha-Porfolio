@@ -18,7 +18,7 @@ const Page5 = () => {
             certificate:"https://github.com/DebayanSaha/Achievements-and-Certifications/blob/main/SIH_Internal_Certificate-16%5B1%5D.pdf",
         },
         {
-            title:" Tech Head",
+            title:"tech / Technical Head",
             event:"@UNiTRON 25",
             highlights:[ " team mentorship"," Technical leadership", " Robotics development",  ],
             certificate:"https://github.com/DebayanSaha/Achievements-and-Certifications/blob/main/TechHead.jpg",

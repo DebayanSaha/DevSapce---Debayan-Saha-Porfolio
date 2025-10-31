@@ -4,11 +4,13 @@ const Page3 = () => {
   return (
     <>
     <div className='h-screen w-full p-4 bg-white mt-10'>
-            <div className='relative h-[45vw] overflow-hidden '>
+            <div className='relative h-[45vw] overflow-hidden'>
                 <video autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover rounded-[30px]' src="/vids/file.mp4"></video>
-
-                <div className='relative h-full w-1/2 p-4 flex flex-col justify-center'>
-                    <h1 className='text-center font-[A] text-[12vw] uppercase text-white leading-[15vw]'>About me</h1>
+                <div className='absolute h-[45vw] right-0'>
+                    <img className='h-full rounded-[30px] ' src="/background/astro3.png" alt="" />
+                </div>
+                <div className='relative h-full w-2/3 p-4 flex flex-col justify-center'>
+                    <h1 className='text-center font-[A] text-[17vw] uppercase text-white leading-[16vw]'>About me..</h1>
                     <div className='h-40 w-full text-center'>
                         <h2 className='font-[B] text-[22px] leading-[1.5vw]'>ENGINEERED INTUITION | DIGITAL PRECISION</h2> 
                         <h2 className='font-[B] text-[20px]'>CODE THAT THINKS | DESIGN THAT PERFORMS</h2>
