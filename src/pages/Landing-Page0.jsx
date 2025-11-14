@@ -24,19 +24,18 @@ const Page0 = () => {
     })
   return (
     <div id='home'>
-        <div className='bg-[#DCDCDC] h-screen w-full flex items-center justify-center p-10'>
-            <h1 ref={textRef} className='absolute font-[E] text-black text-[20vw] z-11 '>DEV <span className='text-stroke-white'>SP</span>ACE</h1>
-            <div className='absolute h-[45vw] w-1/2 left-1/2 -translate-x-1/2 top-13 z-10'>
+        <div className='bg-[#DCDCDC] relative h-screen w-full flex items-center justify-center lg:p-10'>
+            <h1 ref={textRef} className='font-[E] text-black text-center absolute text-[20vw] bottom-32 z-11 lg:top-1/2 lg:-translate-y-1/2 lg:bottom-auto'>DEV <span className='text-stroke-white'>SP</span>ACE</h1>
+            <div className='absolute left-1/2 -translate-x-1/2 lg:top-13 top-5 w-[90vw] lg:max-w-[29.2vw] z-10'>
                 <img className='h-full object-contain object-center' src="/landingPage/DEBAYAN SAHA.png" alt="" />
             </div>
-            <div ref={paraRef} className='absolute h-60 w-[35vw] z-12 right-0 top-[32vw] p-8 '>
-                <p className='font-[B] text-[#505050] text-[18px] '>
+            <div ref={paraRef} className='absolute lg:h-60 h-27 lg:w-[35vw] z-12 lg:right-0 lg:top-[32vw] bottom-0 w-[] lg:p-8 p-2'>
+                <p className='font-[B] text-[#505050] lg:text-[18px] text-[13px] '>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" Welcome to <span className='text-[#F15039] font-[E]'>Dev Space</span>, a portfolio built for tomorrow.  An idea featuring space and future.
                     <span className='text-[#F15039] '>Every element here reflects my obsession with design, motion, and futuristic storytelling.</span>"
                 </p>
             </div>
-            <h1 ref={semiTextRef} className='absolute font-[C] text-[#767676] text-[1.8vw] left-10 top-[33vw]'>@By Debayan Saha</h1>
-            
+            <h1 ref={semiTextRef} className='absolute font-[C] text-[#767676] lg:text-[1.8vw] lg:left-10 left-2 lg:top-[33vw] bottom-32'>@By Debayan Saha</h1>
         </div>
     </div>
   )

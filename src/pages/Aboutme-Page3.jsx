@@ -42,20 +42,19 @@ const Page3 = () => {
     })
   return (
     <>
-    <div ref={page3Ref} id='about' className='h-screen w-full p-4 bg-white mt-10'>
-            <div className='relative h-[45vw] overflow-hidden'>
+    <div ref={page3Ref} id='about' className='h-screen  w-full lg:p-4 p-2 bg-white lg:mt-10'>
+            <div className='relative lg:h-[45vw] h-full overflow-hidden'>
                 <video autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover rounded-[30px]' src="/vids/file.mp4"></video>
-                <div className='absolute h-[45vw] right-0'>
+                <div className='absolute lg:h-[45vw] right-0 bottom-0'>
                     <img ref={img1Ref} className='h-full rounded-[30px]' src="/background/astro3.png" alt="" />
-                    
                 </div>
-                <div className='relative h-full w-1/2 p-4 flex flex-col justify-center'>
-                    <h1 ref={h1Ref} className='text-center font-[A] text-[15vw] uppercase text-white leading-[16vw]'>About me</h1>
+                <div className='relative h-full lg:w-1/2 lg:p-4 p-2 flex flex-col lg:justify-center justify-start lg:mt-0 mt-20'>
+                    <h1 ref={h1Ref} className='text-center font-[A] lg:text-[15vw] text-[30vw] uppercase text-white lg:leading-[16vw] leading-[20vw]'>About me</h1>
                     <div ref={h2Ref} className='h-40 w-full text-center'>
-                        <h2 className='font-[B] text-[22px] leading-[1.5vw]'>ENGINEERED INTUITION | DIGITAL PRECISION</h2> 
+                        <h2 className='font-[B] text-[22px] lg:leading-[1.5vw] mb-2'>ENGINEERED INTUITION | DIGITAL PRECISION</h2> 
                         <h2 className='font-[B] text-[20px]'>CODE THAT THINKS | DESIGN THAT PERFORMS</h2>
-                        <div className='h-30 w-[80%] mt-3 mx-auto '>
-                            <h3 className='font-[B] text-[20px] text-[#9A9A9A] leading-tight'>" I’m Debayan — a full-stack architect turning complexity into clarity.From backend logic to pixel-perfect UI, I craft scalable, human-centered systems that move fast, feel right, and endure.Future-focused. Relentlessly precise. Built to last. "</h3>
+                        <div className='h-30 lg:w-[80%] w-[90%] lg:mt-3 mt-5 mx-auto '>
+                            <h3 className='font-[B] text-[20px] lg:text-[#9A9A9A] text-[#e0e0e0] leading-tight'>" I’m Debayan Saha — a full-stack architect from Kolkata located in West Bengal, India turning complexity into clarity. From backend logic to pixel-perfect UI, I craft scalable, human-centered systems that move fast, feel right, and endure. "</h3>
                         </div>
                     </div>
                 </div>

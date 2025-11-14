@@ -9,20 +9,26 @@ const Page2 = () => {
     
     const innerRef = useRef(null);
     
-    useGSAP(function(){
-        gsap.from('.rotateText',{
-            transform:'rotateX(-80deg)',
-            opacity:0,
-            duration:2,
-            stagger:4,
-            scrollTrigger:{
-                trigger:'.rotateText',
-                start:'top 60%',
-                end:'top -200%',
+    useGSAP(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+
+        // run animation ONLY on large screens
+        gsap.from('.rotateText', {
+            rotateX: -80,
+            opacity: 0,
+            duration: 2,
+            stagger: 4,
+            scrollTrigger: {
+                trigger: '.rotateText',
+                start: 'top 60%',
+                end: 'top -200%',
                 scrub: 3
             }
-        })
-    },[])
+        });
+    });
+    }, []);
 
     useGSAP(function(){
 
@@ -30,35 +36,35 @@ const Page2 = () => {
 
         gsap.to(innerRef.current,{
             x:-totalWidth,
-            duration:15,
+            duration:12,
             ease:"none",
             repeat:-1
         })
     },[])
 
   return (
-    <div id='section2' className=' bg-white text-black p-5 text-center overflow-hidden'>
+    <div id='section2' className=' bg-white text-black lg:p-5 lg:mt-0 mt-15 text-center overflow-hidden'>
         <h3 className='text-gray-500 font-[D] text-xl'>© DevSpace | Debayan Saha Portfolio 2025</h3>
         <div className='rotateText mt-10'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>IMPACTFUL</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>IMPACTFUL</h1>
         </div>
         <div className='rotateText'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>DESIGN</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>DESIGN</h1>
         </div>
         <div className='rotateText'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>IS THE</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>IS THE</h1>
         </div>
         <div className='rotateText'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>DESIGN</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>DESIGN</h1>
         </div>
         <div className='rotateText'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>THAT</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>THAT</h1>
         </div>
         <div className='rotateText'>
-            <h1 className='font-[A] text-[42vw] leading-[35vw]'>WORKS!</h1>
+            <h1 className='font-[A] lg:text-[42vw] text-[45vw] leading-[35vw]'>WORKS!</h1>
         </div>
 
-        <div className='mt-8 h-45 w-full overflow-hidden'>
+        <div className='lg:mt-8 lg:h-45 h-30 w-full overflow-hidden'>
             <div ref={innerRef} className='h-full w-full flex flex-row no-wrap'>
                 <img src="/logo/MERN.png" alt="" />
                 <img src="/logo/js.png" alt="" />

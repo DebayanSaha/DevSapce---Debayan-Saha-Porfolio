@@ -8,14 +8,14 @@ const Header = () => {
 
   return (
     <div className='head fixed z-18'>
-        <div className='fixed w-full px-10 py-16 flex items-center justify-end '>
+        <div className='fixed w-full lg:px-10 py-4 px-2 lg:py-16 flex items-center justify-end '>
             <button onClick={()=>{
               const link = document.createElement('a');
               link.href='/resume/DEBAYAN SAHA 25.pdf';
               link.download='DEBAYAN SAHA 25.pdf';
               link.click();
-            }} className='shadow-2xl shadow-zinc-700 font-[B] bg-black px-9 py-3 rounded-full border-4 border-white uppercase hover:bg-zinc-500 cursor-pointer '>resume</button>
-            <i onClick={()=>setShowNavbar(true)} className="ri-more-2-fill text-4xl text-white ml-3 hover:rotate-90 transition-transform duration-400 cursor-pointer "></i>
+            }} className='shadow-2xl shadow-zinc-700 font-[B] bg-black lg:px-9 px-4 lg:py-3 rounded-full border-4 border-white uppercase hover:bg-zinc-500 cursor-pointer '>resume</button>
+            <i onClick={()=>setShowNavbar(true)} className="ri-more-2-fill lg:text-4xl text-2xl text-white ml-3 hover:rotate-90 transition-transform duration-400 cursor-pointer "></i>
         </div>
         {showNavbar && (
           <NavBar onClose={()=>setShowNavbar(false)} />

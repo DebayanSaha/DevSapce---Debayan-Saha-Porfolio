@@ -76,25 +76,24 @@ const Page1 = () => {
     setXVal((e.clientX - rect.x - rect.width / 2) / 70)
     setYVal((e.clientY - rect.y - rect.height / 2) / 10)
   }
-
+  
   return (
-    <div onMouseMove={mouseMoving} ref={introRef} className='h-screen p-4 bg-white relative'>
+    <div onMouseMove={mouseMoving} ref={introRef} className='h-screen lg:p-4 px-1.5 py-2 bg-white relative'>
       <div id='page1-in'
-        className='shadow-xl shadow-zinc-500 relative py-10 px-20 h-full w-full bg-cover bg-[url(/background/bg1.png)] rounded-[30px]'
-      >
+        className='shadow-xl shadow-zinc-500 relative py-10 lg:px-20 px-4 h-full w-full bg-cover lg:bg-[url(/background/bg1.png)] bg-[url(/background/bg3.png)] rounded-[30px]'>
         <TiltText abc={tiltRef} />
 
-        <div className='absolute left-0 bottom-0 py-15 px-16 h-40 w-full flex items-end justify-between'>
+        <div className='absolute left-0 bottom-0 lg:py-15 p-4 lg:px-16 h-40 w-full flex items-end justify-between'>
           <div ref={bottomTextRef}>
-            <h2 className='text-[20px] font-[B]'>debayans682@gmail.com | 8617262208</h2>
-            <h3 className='text-[18px] font-[D] text-gray-400 uppercase'>
+            <h2 className='lg:text-[20px] font-[B]'>debayans682@gmail.com | 8617262208</h2>
+            <h3 className='lg:text-[18px] font-[D] lg:text-gray-400 text-gray-200 uppercase'>
               Website Design & Development
             </h3>
           </div>
 
           <div ref={bannerRef} id='banner'>
-            <img className='h-25 mb-5' src="/logo/10+.png" />
-            <img className='h-25' src="/logo/5+.png" />
+            <img className='lg:h-25 mb-5' src="/logo/10+.png" />
+            <img className='lg:h-25' src="/logo/5+.png" />
           </div>
         </div>
       </div>
