@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 const TiltText = (props) => {
+  
   return (
     <div id='tiltDiv' ref={props.abc} className='mt-35'>
         <h1 className='text-[4.2vw] font-[F] uppercase leading-[4vw]'>I am a </h1>

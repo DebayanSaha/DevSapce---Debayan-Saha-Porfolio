@@ -26,8 +26,13 @@
   font-family: F;
   src: url(/fonts/ef63838ae561375a-s.p.woff2);
 }
+@font-face {
+  font-family: G;
+  src: url(/fonts/Lausanne-500.woff2);
+}
 
 html,body{
+  scroll-behavior: smooth;
   color: white;
 }
 #page1-in{
@@ -49,4 +54,8 @@ html,body{
 }
 .head{
   width: fit-content;
+}
+.text-stroke-white {
+  color: rgba(255, 255, 255, 0.415);
+  -webkit-text-stroke: 1px rgba(194, 194, 194, 0.414);
 }

@@ -1,6 +1,11 @@
+import { useGSAP } from '@gsap/react';
 import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import React, { useRef, useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Page4 = () => {
     const [index, setIndex] = useState(0);
@@ -33,14 +38,37 @@ const Page4 = () => {
             link:"https://github.com/DebayanSaha/ViteKickloadProduction",
         }
     ]
-
+    const page4Ref = useRef(null)
+    const titleRef = useRef(null)
+    
+    useGSAP(function(){
+        const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: page4Ref.current,
+                    start: "top 100%",
+                    end: "bottom 60%",
+                    scrub: false,
+                }
+        })
+        tl.from(page4Ref.current, {
+            opacity: 0,
+            y: 150,
+            scale: 0.95,
+            duration: 1.3,
+            ease: "power2.out",
+        })
+        tl.fromTo(titleRef.current,
+            {y:100, opacity: 0 },
+            {y: 0, opacity: 1, duration: 0.8, ease: "power2.out"}
+        )
+    })
   return (
     <>
-        <div className='h-screen*2 w-full p-4 bg-black mt-10'>
+        <div ref={page4Ref} id='work' className='h-screen*2 w-full p-4 bg-black mt-10'>
             <div className='relative h-[40vw] rounded-4xl bg-white p-3.5'>
                 <div className='relative h-full w-full rounded-[20px] overflow-hidden'>
                     <video autoPlay loop muted className=' absolute object-cover' src="/vids/work.mp4"></video>
-                    <div className='relative mt-[12vw] '>
+                    <div ref={titleRef} className='relative mt-[12vw] '>
                         <h1 className='text-center font-[A] text-[20vw] uppercase text-white leading-2.5 '>My</h1>
                         <h1 className='text-center font-[A] text-[20vw] uppercase text-white'>Works</h1>
                     </div>
@@ -51,7 +79,7 @@ const Page4 = () => {
                 <i onClick={handlePrev} className="absolute z-12 left-0 text-3xl ri-arrow-left-s-line cursor-pointer"></i>
                 <div className='absolute top-40 right-40 h-50 w-50 border-2 border-[#9a9a9a38] shadow-2xl shadow-[#9a9a9a38] rounded-4xl z-11 flex items-center justify-center'>
                     <i onClick={()=>window.open(project[index].link,"_blank")} className="cursor-pointer text-[30vh] ri-arrow-right-up-line"></i>
-                </div>
+                </div>  
                 <AnimatePresence mode='wait'>
                     <motion.div key={index}
                     initial={{ opacity: 0 , x:100 , scale: 0.9 }} animate={{ opacity: 1 , x: 0, scale: 1 }} exit={{ opacity: 0 , x:-100, scale: 0.9 }}
@@ -62,14 +90,7 @@ const Page4 = () => {
                             <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
                         </div> 
                     </motion.div>
-                </AnimatePresence>
-                
-                    {/* <h1 className='absolute font-[E] bottom-25 leading-0 text-[14vw] uppercase z-11'>{project[index].name}</h1>
-                    <div className='absolute top-20 h-96 w-96 rounded-full overflow-hidden'>
-                        <video className='h-full w-full object-cover' autoPlay muted loop src={project[index].path}></video>
-                    </div> */}
-            
-                
+                </AnimatePresence>               
             </div>
         </div>
     </>     

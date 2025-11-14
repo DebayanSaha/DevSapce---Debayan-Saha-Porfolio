@@ -9,8 +9,8 @@ const Loader = ({onComplete}) => {
   useEffect(()=>{
       gsap.to({val:0},{
         val:100,
-        duration:5,
-        ease: "power1.out",
+        duration:5.8,
+        ease: "power2.inOut",
         onUpdate: function(){
           setProgress(Math.floor(this.targets()[0].val))
         },

@@ -1,6 +1,11 @@
+import { useGSAP } from '@gsap/react'
 import {motion, AnimatePresence } from 'framer-motion'
-import React, { useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import React, { useRef, useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Page5 = () => {
     const [card, setCard] = useState(0)
@@ -30,13 +35,44 @@ const Page5 = () => {
     const handlePrev=()=>{
         setCard((prev)=>prev===0? achievement.length-1 : prev-1);
     }
+
+    const page5Ref = useRef(null)
+    const achievementRef = useRef(null)
+    const titleRef = useRef(null)
+
+    useGSAP(function(){
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: page5Ref.current,
+                start: "top 80%",
+                end: "bottom 60%",
+                scrub: false,
+            }
+        })
+        tl.from(page5Ref.current, {
+            opacity: 0,
+            y: 150,
+            scale: 0.95,
+            duration: 1.3,
+            ease: "power2.out",
+        })
+        tl.fromTo(titleRef.current,
+            {x:100, opacity: 0 },
+            {x: 0, opacity: 1, duration: 0.8, ease: "power2.out"}
+        )
+        tl.fromTo(achievementRef.current,
+            {x:-100, opacity: 0 },
+            {x: 0, opacity: 1, duration: 1.3, ease: "power2.out"},"-=1"
+        )
+    })
+
   return (
     <>
-        <div className='h-screen p-4'>
+        <div id='impact' ref={page5Ref} className='h-screen p-4'>
             <div className='relative h-full w-full overflow-hidden bg-black rounded-[30px]'>
                 <video autoPlay loop muted className='absolute object-cover z-4' src="/vids/expi.mp4"></video>
                 <div className='relative h-full w-full p-4 z-5'>
-                    <div className='absolute h-full w-3/7 p-5 flex items-center justify-center'>
+                    <div ref={achievementRef} className='absolute h-full w-3/7 p-5 flex items-center justify-center'>
                         <i onClick={handlePrev} className="absolute text-4xl text-[#d5d5d5] top-0 ri-arrow-up-s-line z-100 cursor-pointer "></i>
                         <i onClick={handleNext} className="absolute text-4xl text-[#d5d5d5] bottom-5 ri-arrow-down-s-line z-100 cursor-pointer"></i>
                         <AnimatePresence mode='wait'>
@@ -60,7 +96,7 @@ const Page5 = () => {
                         
                     </div>
                     
-                    <div className='absolute h-full right-0 w-2/5 flex items-center justify-center '>
+                    <div ref={titleRef} className='absolute h-full right-0 w-2/5 flex items-center justify-center '>
                         <div className='h-full w-full p-20 text-center'>
                             <h1 className='shadow mt-[14vw] font-[A] uppercase text-[20vw] leading-[50px] '>My</h1>
                             <h1 className='shadow font-[A] uppercase text-[18vw]'>Impact</h1>
