@@ -52,8 +52,8 @@ const Page3 = () => {
                 <div className='relative h-full lg:w-1/2 lg:p-4 p-2 flex flex-col lg:justify-center justify-start lg:mt-0 mt-20'>
                     <h1 ref={h1Ref} className='text-center font-[A] lg:text-[15vw] text-[30vw] uppercase text-white lg:leading-[16vw] leading-[20vw]'>About me</h1>
                     <div ref={h2Ref} className='h-40 w-full text-center'>
-                        <h2 className='font-[B] text-[22px] lg:leading-[1.5vw] mb-2'>ENGINEERED INTUITION | DIGITAL PRECISION</h2> 
-                        <h2 className='font-[B] text-[20px]'>CODE THAT THINKS | DESIGN THAT PERFORMS</h2>
+                        <h2 className='font-[B] text-[22px] lg:leading-[1.5vw] mb-2 uppercase'>B.Tech in Computer Science and Engineering</h2> 
+                        <h2 className='font-[B] text-[20px] uppercase'>21+ | Kolkata, West Bengal | India</h2>
                         <div className='h-30 lg:w-[80%] w-[90%] lg:mt-3 mt-5 mx-auto '>
                             <h3 className='font-[B] text-[20px] lg:text-[#9A9A9A] text-[#e0e0e0] leading-tight'>" I’m Debayan Saha — a full-stack architect from Kolkata located in West Bengal, India turning complexity into clarity. From backend logic to pixel-perfect UI, I craft scalable, human-centered systems that move fast, feel right, and endure. "</h3>
                         </div>
