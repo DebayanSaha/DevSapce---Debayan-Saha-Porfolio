@@ -30,8 +30,8 @@ const Loader = ({onComplete}) => {
 
   return (
     <>
-      <div ref={loaderRef} className=' h-screen w-full bg-black flex items-end justify-end px-20'>
-        <h1 className='loading font-[A] text-[15vw] text-white '>{progress}%</h1>
+      <div ref={loaderRef} className=' h-screen w-full bg-black flex lg:items-end items-center lg:justify-end justify-center px-20'>
+        <h1 className='loading font-[A] lg:text-[15vw] text-[25vw] text-white '>{progress}%</h1>
       </div>
     </>
   )
