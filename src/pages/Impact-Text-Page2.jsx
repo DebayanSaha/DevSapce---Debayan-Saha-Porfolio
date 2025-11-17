@@ -74,6 +74,7 @@ const Page2 = () => {
                 <img src="/logo/gsap.png" alt="" />
                 <img src="/logo/html.png" alt="" />
                 <img src="/logo/css.png" alt="" />
+                <img src="/logo/Figma.png" alt="" />
 
                 <img src="/logo/MERN.png" alt="" />
                 <img src="/logo/js.png" alt="" />
@@ -83,6 +84,7 @@ const Page2 = () => {
                 <img src="/logo/gsap.png" alt="" />
                 <img src="/logo/html.png" alt="" />
                 <img src="/logo/css.png" alt="" />
+                <img src="/logo/Figma.png" alt="" />
             </div>
         </div>
     </div>
