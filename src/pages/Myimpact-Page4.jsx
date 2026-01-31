@@ -72,7 +72,7 @@ const Page5 = () => {
             <div className='relative h-full w-full overflow-hidden bg-black rounded-[30px]'>
                 <video autoPlay loop muted className='absolute object-cover z-4' src="/vids/expi.mp4"></video>
                 <div className='relative h-full w-full p-4 z-5'>
-                    <div ref={achievementRef} className='absolute lg:top-3 bottom-5  lg:h-[97%] h-1/2 lg:w-3/7 w-[90%] p-5  flex items-center justify-center '>
+                    <div ref={achievementRef} className='absolute lg:top-3 bottom-5 lg:h-[97%] h-1/2 lg:w-3/7 w-[90%] p-5  flex items-center justify-center '>
                         <i onClick={handlePrev} className="absolute lg:text-4xl text-2xl text-[#d5d5d5] top-0 ri-arrow-up-s-line z-100 cursor-pointer "></i>
                         <i onClick={handleNext} className="absolute lg:text-4xl text-2xl text-[#d5d5d5] bottom-0 ri-arrow-down-s-line z-100 cursor-pointer"></i>
                         <AnimatePresence mode='wait'>
