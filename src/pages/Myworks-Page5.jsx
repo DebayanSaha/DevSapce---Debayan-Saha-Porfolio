@@ -18,6 +18,16 @@ const Page4 = () => {
 
     const project=[
         {
+            path:"/vids/reviIntro.mp4",
+            name:"REVI AI",
+            link:"https://reviai0.netlify.app/",
+        },
+        {
+            path:"/vids/intern4.mp4",
+            name:"Kickload",
+            link:"https://github.com/DebayanSaha/ViteKickloadProduction",
+        }, 
+        {
             path:"/vids/k72vid.mp4",
             name:"K72 Clone",
             link:"https://k72-5oux.onrender.com",
@@ -26,12 +36,7 @@ const Page4 = () => {
             path:"/vids/MagmaVid.mp4",
             name:"MAGMA",
             link:"https://magma-lake.vercel.app/",
-        },
-        {
-            path:"/vids/intern4.mp4",
-            name:"Kickload",
-            link:"https://github.com/DebayanSaha/ViteKickloadProduction",
-        },
+        },  
         {
             path:"/vids/netflix.mp4",
             name:"Fletmirror",
