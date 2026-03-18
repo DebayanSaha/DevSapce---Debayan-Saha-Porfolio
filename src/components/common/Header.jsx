@@ -11,7 +11,7 @@ const Header = () => {
         <div className='fixed w-full lg:px-10 py-4 px-2 lg:py-16 flex items-center justify-end '>
             <button onClick={()=>{
               const link = document.createElement('a');
-              link.href='/resume/resume_DebayanSaha.pdf';
+              link.href='/resume/debayansaha_cv.pdf';
               link.download='resume.pdf';
               link.click();
             }} className='shadow-2xl shadow-zinc-700 font-[B] bg-black lg:px-9 px-4 lg:py-3 rounded-full border-4 border-white uppercase hover:bg-zinc-500 cursor-pointer '>resume</button>
